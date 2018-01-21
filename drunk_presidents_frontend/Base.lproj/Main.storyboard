@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="drunk_presidents_frontend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gilbert_Stuart_Williamstown_Portrait_of_George_Washington" translatesAutoresizingMaskIntoConstraints="NO" id="oyy-ki-hMe">
+                                <rect key="frame" x="30" y="159" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="C3V-TO-KaL"/>
+                                    <constraint firstAttribute="height" constant="128" id="RQY-Iv-QRl"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FDR_in_1933" translatesAutoresizingMaskIntoConstraints="NO" id="BEG-zy-ZZp">
+                                <rect key="frame" x="30" y="404" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="DXf-rm-Nau"/>
+                                    <constraint firstAttribute="width" constant="128" id="jPL-L9-biU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="George Washington" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gj-LX-2nN">
+                                <rect key="frame" x="30" y="297" width="128" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="DXs-0Z-H8p"/>
+                                    <constraint firstAttribute="width" constant="128" id="oD5-Ig-exf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Franklin D. Roosevelt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bc0-hy-t2U">
+                                <rect key="frame" x="30" y="542" width="128" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="IEt-4w-Z6p"/>
+                                    <constraint firstAttribute="height" constant="42" id="XSv-b4-hwe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming soon..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRV-j2-DIR">
+                                <rect key="frame" x="217" y="540" width="128" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="Uap-6n-bh2"/>
+                                    <constraint firstAttribute="height" constant="42" id="YRz-cl-3P9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abraham Lincoln" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53g-hX-NC5">
+                                <rect key="frame" x="217" y="297" width="128" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="At9-X3-aVS"/>
+                                    <constraint firstAttribute="width" constant="128" id="Hjf-6J-Xx0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VHM-tC-a8f">
+                                <rect key="frame" x="217" y="402" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="EML-cD-ciH"/>
+                                    <constraint firstAttribute="width" constant="128" id="KDQ-57-QrO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drunk US Presidents" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCo-yP-uf3">
+                                <rect key="frame" x="72" y="55" width="231" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Abraham_Lincoln_O-77_matte_collodion_print" translatesAutoresizingMaskIntoConstraints="NO" id="I3B-On-pGf">
+                                <rect key="frame" x="217" y="159" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ogi-pX-jdm"/>
+                                    <constraint firstAttribute="width" constant="128" id="tE3-CI-uKz"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7i-ft-v2v" userLabel="Lincoln Button">
+                                <rect key="frame" x="228" y="159" width="106" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="181" id="SFM-O9-bT1"/>
+                                    <constraint firstAttribute="width" constant="106" id="jnt-pe-j15"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="lincolnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TgE-y4-vYs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJI-6L-Adf" userLabel="FDR Button">
+                                <rect key="frame" x="41" y="404" width="106" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="9EG-Hi-oVf"/>
+                                    <constraint firstAttribute="height" constant="181" id="goa-Zz-fmm"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="fDRButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Hg-lA-w2G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMe-gA-B3R" userLabel="Washington Button">
+                                <rect key="frame" x="41" y="159" width="106" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="MRQ-Cn-l6d"/>
+                                    <constraint firstAttribute="height" constant="181" id="PZ5-yx-h0z"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="washingtonButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D12-W3-sRm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I3B-On-pGf" firstAttribute="top" secondItem="vCo-yP-uf3" secondAttribute="bottom" constant="75" id="1Uz-Gr-apI"/>
+                            <constraint firstItem="p7i-ft-v2v" firstAttribute="top" secondItem="vCo-yP-uf3" secondAttribute="bottom" constant="75" id="3fw-fg-Agq"/>
+                            <constraint firstItem="wMe-gA-B3R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="4UZ-k8-qOb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p7i-ft-v2v" secondAttribute="trailing" constant="41" id="8bt-FW-uRt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I3B-On-pGf" secondAttribute="trailing" constant="30" id="AWe-MZ-CpS"/>
+                            <constraint firstItem="53g-hX-NC5" firstAttribute="top" secondItem="I3B-On-pGf" secondAttribute="bottom" constant="10" id="Bni-Yq-zSZ"/>
+                            <constraint firstItem="IJI-6L-Adf" firstAttribute="top" secondItem="wMe-gA-B3R" secondAttribute="bottom" constant="64" id="Cqn-0I-asi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zRV-j2-DIR" secondAttribute="trailing" constant="30" id="Gte-KH-MuP"/>
+                            <constraint firstItem="Bc0-hy-t2U" firstAttribute="top" secondItem="BEG-zy-ZZp" secondAttribute="bottom" constant="10" id="O81-ya-bY3"/>
+                            <constraint firstItem="wMe-gA-B3R" firstAttribute="top" secondItem="vCo-yP-uf3" secondAttribute="bottom" constant="75" id="OQr-Ef-OKu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zRV-j2-DIR" secondAttribute="bottom" constant="85" id="Rkf-b3-251"/>
+                            <constraint firstItem="Bc0-hy-t2U" firstAttribute="top" secondItem="BEG-zy-ZZp" secondAttribute="bottom" constant="10" id="TTb-SD-GPd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IJI-6L-Adf" secondAttribute="bottom" constant="82" id="UyZ-WR-iV0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="53g-hX-NC5" secondAttribute="trailing" constant="30" id="Xfo-it-ouy"/>
+                            <constraint firstItem="zRV-j2-DIR" firstAttribute="top" secondItem="VHM-tC-a8f" secondAttribute="bottom" constant="8" id="a53-YN-01C"/>
+                            <constraint firstItem="IJI-6L-Adf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="bUX-XN-gNo"/>
+                            <constraint firstItem="1Gj-LX-2nN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="bbW-hG-b1l"/>
+                            <constraint firstItem="zRV-j2-DIR" firstAttribute="top" secondItem="VHM-tC-a8f" secondAttribute="bottom" constant="10" id="c99-TR-3aT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bc0-hy-t2U" secondAttribute="bottom" constant="83" id="d2o-ye-llm"/>
+                            <constraint firstItem="oyy-ki-hMe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dlN-0u-9uf"/>
+                            <constraint firstItem="BEG-zy-ZZp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gZt-2G-KPR"/>
+                            <constraint firstItem="vCo-yP-uf3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="hVP-ob-HfH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VHM-tC-a8f" secondAttribute="trailing" constant="30" id="mHr-aZ-5fP"/>
+                            <constraint firstItem="vCo-yP-uf3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="tVJ-Ob-6K6"/>
+                            <constraint firstItem="oyy-ki-hMe" firstAttribute="top" secondItem="vCo-yP-uf3" secondAttribute="bottom" constant="75" id="x1N-iv-2Uk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vCo-yP-uf3" secondAttribute="trailing" constant="72" id="xp4-Ze-afX"/>
+                            <constraint firstItem="1Gj-LX-2nN" firstAttribute="top" secondItem="oyy-ki-hMe" secondAttribute="bottom" constant="10" id="yam-mn-4y3"/>
+                            <constraint firstItem="BEG-zy-ZZp" firstAttribute="top" secondItem="1Gj-LX-2nN" secondAttribute="bottom" constant="65" id="yvE-LO-Slw"/>
+                            <constraint firstItem="Bc0-hy-t2U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zlC-u2-aQt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="7GQ-lc-t7E" kind="show" identifier="toQuote" id="nIi-Jc-kdW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Quote View Controller-->
+        <scene sceneID="FVC-Yo-ey6">
+            <objects>
+                <viewController id="7GQ-lc-t7E" customClass="QuoteViewController" customModule="drunk_presidents_frontend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4vz-oE-YMv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97I-rk-81g">
+                                <rect key="frame" x="57" y="194" width="260" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toV-5S-hKO">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="L8m-Rn-Dv9">
+                                        <connections>
+                                            <action selector="cancelButton:" destination="7GQ-lc-t7E" id="irW-98-NRC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="O0j-JN-vnH"/>
+                                    <barButtonItem systemItem="refresh" id="1Ou-2N-1wF">
+                                        <connections>
+                                            <action selector="refreshButton:" destination="7GQ-lc-t7E" id="UXH-TJ-c1y"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wG8-Yq-afy"/>
+                                    <barButtonItem systemItem="save" id="YIr-JT-lln">
+                                        <connections>
+                                            <action selector="savebutton:" destination="7GQ-lc-t7E" id="ekc-lo-ER1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="53W-uZ-ki4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oo0-G8-v0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109.5999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Abraham_Lincoln_O-77_matte_collodion_print" width="276" height="346"/>
+        <image name="FDR_in_1933" width="1244" height="1464"/>
+        <image name="Gilbert_Stuart_Williamstown_Portrait_of_George_Washington" width="110" height="134"/>
+    </resources>
+</document>
