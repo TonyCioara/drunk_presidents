@@ -8,25 +8,40 @@
 
 import UIKit
 
+struct Sentence: Codable {
+    var sentence: String
+}
+
 class QuoteViewController: UIViewController {
     
+    @IBOutlet weak var quoteLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     var president: President?
     var quote = "Server could not be accessed"
     
     @IBAction func cancelButton(_ sender: Any) {
     }
     @IBAction func refreshButton(_ sender: Any) {
-        Network.instance.fetch(route: Route.get_FDR) { (data) in
-            print(data)
-        }
+        getNewQuote()
     }
     @IBAction func savebutton(_ sender: Any) {
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("initiated")
+        if let president = president {
+            switch president {
+            case .FDR:
+                titleLabel.text = "Franklin D. Roosevelt"
+            case .Lincoln:
+                titleLabel.text = "Abraham Lincoln"
+            case .Washington:
+                titleLabel.text = "George Washington"
+
+            }
+        }
         getNewQuote()
+        print(self.quote)
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,17 +53,28 @@ class QuoteViewController: UIViewController {
         if let president = president {
             switch president {
             case .FDR:
-                print("FDR")
+                Network.instance.fetch(route: Route.get_FDR) { (data) in
+                    if let jsonQuote = try? JSONDecoder().decode(Sentence.self, from: data) {
+                        print(jsonQuote)
+                        self.quote = jsonQuote.sentence
+                    }
+                }
             case .Lincoln:
-                print("Lincoln")
+                Network.instance.fetch(route: Route.get_Lincoln) { (data) in
+                    if let jsonQuote = try? JSONDecoder().decode(Sentence.self, from: data) {
+                        print(jsonQuote)
+                        self.quote = jsonQuote.sentence
+                    }
+                }
             case .Washington:
-                print("Washington")
+                Network.instance.fetch(route: Route.get_Washington) { (data) in
+                    if let jsonQuote = try? JSONDecoder().decode(Sentence.self, from: data) {
+                        print(jsonQuote)
+                        self.quote = jsonQuote.sentence
+                    }
+                }
             }
         }
-        Network.instance.fetch(route: Route.get_FDR) { (data) in
-            
-            
-        }
-        
+        self.quoteLabel.text = self.quote
     }
 }

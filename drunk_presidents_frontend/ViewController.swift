@@ -18,25 +18,25 @@ class ViewController: UIViewController {
     var president: President?
     
     @IBAction func washingtonButton(_ sender: Any) {
-        president = President.Washington
+        self.president = President.Washington
         self.performSegue(withIdentifier: "toQuote", sender: president)
     }
     
     @IBAction func lincolnButton(_ sender: Any) {
-        president = President.Lincoln
+        self.president = President.Lincoln
         self.performSegue(withIdentifier: "toQuote", sender: president)
     }
     
     @IBAction func fDRButton(_ sender: Any) {
-        president = President.FDR
+        self.president = President.FDR
         self.performSegue(withIdentifier: "toQuote", sender: president)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
-            if identifier == "ToQuote" {
+            if identifier == "toQuote" {
                 let quoteViewController = segue.destination as! QuoteViewController
-                quoteViewController.president = president
+                quoteViewController.president = self.president
             }
         }
     }
