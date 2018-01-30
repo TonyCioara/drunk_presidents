@@ -22,7 +22,9 @@ class QuoteViewController: UIViewController {
     @IBAction func cancelButton(_ sender: Any) {
     }
     @IBAction func refreshButton(_ sender: Any) {
-        getNewQuote()
+        getNewQuote() {
+            self.quoteLabel.text = self.quote
+        }
     }
     @IBAction func savebutton(_ sender: Any) {
         
@@ -40,7 +42,9 @@ class QuoteViewController: UIViewController {
 
             }
         }
-        getNewQuote()
+        getNewQuote() {
+            self.quoteLabel.text = self.quote
+        }
         print(self.quote)
     }
     
@@ -49,7 +53,7 @@ class QuoteViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getNewQuote() {
+    func getNewQuote(completion: @escaping ()->()) {
         if let president = president {
             switch president {
             case .FDR:
@@ -75,6 +79,8 @@ class QuoteViewController: UIViewController {
                 }
             }
         }
-        self.quoteLabel.text = self.quote
+        
+        completion()
+        
     }
 }
