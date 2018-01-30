@@ -17,7 +17,7 @@ class QuoteViewController: UIViewController {
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     var president: President?
-    var quote = "Server could not be accessed"
+    var quote = "Waiting for server ..."
     
     @IBAction func cancelButton(_ sender: Any) {
     }
@@ -58,28 +58,36 @@ class QuoteViewController: UIViewController {
             switch president {
             case .FDR:
                 Network.instance.fetch(route: Route.get_FDR) { (data) in
-                    if let jsonQuote = try? JSONDecoder().decode(Sentence.self, from: data) {
-                        print(jsonQuote)
-                        self.quote = jsonQuote.sentence
+                    DispatchQueue.main.async {
+                        if let jsonQuote = try? JSONDecoder().decode(Sentence.self, from: data) {
+                            print(jsonQuote)
+                            self.quote = jsonQuote.sentence
+                            self.quoteLabel.text = self.quote
+                        }
                     }
                 }
             case .Lincoln:
                 Network.instance.fetch(route: Route.get_Lincoln) { (data) in
-                    if let jsonQuote = try? JSONDecoder().decode(Sentence.self, from: data) {
-                        print(jsonQuote)
-                        self.quote = jsonQuote.sentence
+                    DispatchQueue.main.async {
+                        if let jsonQuote = try? JSONDecoder().decode(Sentence.self, from: data) {
+                            print(jsonQuote)
+                            self.quote = jsonQuote.sentence
+                            self.quoteLabel.text = self.quote
+                        }
                     }
                 }
             case .Washington:
                 Network.instance.fetch(route: Route.get_Washington) { (data) in
-                    if let jsonQuote = try? JSONDecoder().decode(Sentence.self, from: data) {
-                        print(jsonQuote)
-                        self.quote = jsonQuote.sentence
+                    DispatchQueue.main.async {
+                        if let jsonQuote = try? JSONDecoder().decode(Sentence.self, from: data) {
+                            print(jsonQuote)
+                            self.quote = jsonQuote.sentence
+                            self.quoteLabel.text = self.quote
+                        }
                     }
                 }
             }
         }
-        
         completion()
         
     }
