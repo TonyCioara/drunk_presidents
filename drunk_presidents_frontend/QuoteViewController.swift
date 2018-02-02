@@ -17,7 +17,7 @@ class QuoteViewController: UIViewController {
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     var president: President?
-    var quote = "Waiting for server ..."
+    var quote = "Getting drunk ..."
     
     @IBAction func cancelButton(_ sender: Any) {
     }
@@ -39,7 +39,6 @@ class QuoteViewController: UIViewController {
                 titleLabel.text = "Abraham Lincoln"
             case .Washington:
                 titleLabel.text = "George Washington"
-
             }
         }
         getNewQuote() {
