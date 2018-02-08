@@ -15,30 +15,30 @@ struct Sentence: Codable {
 class QuoteViewController: UIViewController {
     
     @IBOutlet weak var quoteLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
     var president: President?
     var quote = "Getting drunk ..."
     
-    @IBAction func cancelButton(_ sender: Any) {
-    }
     @IBAction func refreshButton(_ sender: Any) {
         getNewQuote() {
             self.quoteLabel.text = self.quote
         }
     }
-    @IBAction func savebutton(_ sender: Any) {
-        
-    }
+    
+    // MARK: View Lifecycle
+    
+    // Add some comments divide and group code by functionality...
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let president = president {
+        self.navigationController!.navigationBar.topItem!.title = ""
+        if let president = self.president {
             switch president {
             case .FDR:
-                titleLabel.text = "Franklin D. Roosevelt"
+                self.navigationItem.title = "Franklin D. Roosevelt"
             case .Lincoln:
-                titleLabel.text = "Abraham Lincoln"
+                self.navigationItem.title = "Abraham Lincoln"
             case .Washington:
-                titleLabel.text = "George Washington"
+                self.navigationItem.title = "George Washington"
             }
         }
         getNewQuote() {
@@ -51,6 +51,9 @@ class QuoteViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    // TODO: This could more DRY... Put it in the "dryer"
     
     func getNewQuote(completion: @escaping ()->()) {
         if let president = president {

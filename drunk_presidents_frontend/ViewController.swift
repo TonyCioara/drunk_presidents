@@ -7,18 +7,29 @@
 //
 
 import UIKit
+
+// FIXME: Add comments
+
+// This enum might be able to handle more..
+// names and images ...
+
 enum President: Int {
     case Washington = 0
     case Lincoln = 1
     case FDR = 2
+    
+    
 }
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let president_count = 4
+    let president_count = 3
     var president: President?
+    
+    
+    // MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
@@ -28,21 +39,38 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             }
         }
     }
+    
+    
 
+    // MARK: View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "navigationBarImage"), for: .default)
         // Do any additional setup after loading the view, typically from a nib.
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationItem.title = "DRUNK PRESIDENTS"
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK: Collection View
+    
+    // Think about moving this to an extension
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.president_count
+        return self.president_count + 3
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -54,23 +82,32 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "presidentCell", for: indexPath) as! PresidentCell
-        if indexPath.row == self.president_count - 1 {
+        if indexPath.row >= self.president_count {
             cell.presidentNameLabel.text = "Coming soon"
+            cell.presidentImageView.image = #imageLiteral(resourceName: "Coming soon portrait")
             return cell
         }
         self.president = President(rawValue: indexPath.row)
+        
+        // Think about moving this into a func
         switch self.president! {
         case .Washington:
-            cell.presidentImageView.image = #imageLiteral(resourceName: "george-washington-in-black-and-white")
+            cell.presidentImageView.image = #imageLiteral(resourceName: "Washington Portrait")
             cell.presidentNameLabel.text = "George Washington"
         case .Lincoln:
-            cell.presidentImageView.image = #imageLiteral(resourceName: "Abraham_Lincoln_O-77_matte_collodion_print")
+            cell.presidentImageView.image = #imageLiteral(resourceName: "Lincoln Portrait")
             cell.presidentNameLabel.text = "Abraham Lincoln"
         case .FDR:
-            cell.presidentImageView.image = #imageLiteral(resourceName: "FDR_in_1933")
+            cell.presidentImageView.image = #imageLiteral(resourceName: "FDR Portait")
             cell.presidentNameLabel.text = "Franklin D. Roosevelt"
         }
         return cell
+    }
+    
+    // MARK: Utility
+    
+    func getPrez (prez: Int) {
+        
     }
 
 }
