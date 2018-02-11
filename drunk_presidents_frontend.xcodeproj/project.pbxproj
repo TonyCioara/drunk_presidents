@@ -15,6 +15,11 @@
 		21BC74E32023D27800685348 /* PresidentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC74E22023D27800685348 /* PresidentCell.swift */; };
 		21C372DF2023CF580017DBFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C372DD2023CF580017DBFB /* Main.storyboard */; };
 		21E792B22011C3D7009B58EB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E792B12011C3D7009B58EB /* Networking.swift */; };
+		21F8946B202E647B005820FD /* storedQuote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21F89469202E647B005820FD /* storedQuote.xcdatamodeld */; };
+		21F8946D202E64FA005820FD /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F8946C202E64FA005820FD /* CoreDataStack.swift */; };
+		21F8946F202F8448005820FD /* Quote extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F8946E202F8448005820FD /* Quote extensions.swift */; };
+		21F89471202F8A4E005820FD /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F89470202F8A4E005820FD /* BookmarksViewController.swift */; };
+		21F89473202F8BB4005820FD /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F89472202F8BB4005820FD /* QuoteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		21BC74E22023D27800685348 /* PresidentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresidentCell.swift; sourceTree = "<group>"; };
 		21C372DE2023CF580017DBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21E792B12011C3D7009B58EB /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		21F8946A202E647B005820FD /* storedQuote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = storedQuote.xcdatamodel; sourceTree = "<group>"; };
+		21F8946C202E64FA005820FD /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		21F8946E202F8448005820FD /* Quote extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quote extensions.swift"; sourceTree = "<group>"; };
+		21F89470202F8A4E005820FD /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		21F89472202F8BB4005820FD /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +73,13 @@
 				21B99BF3200FF0CE00FD05A8 /* AppDelegate.swift */,
 				21330C8120140FF300CD985C /* QuoteViewController.swift */,
 				21B99BF5200FF0CE00FD05A8 /* ViewController.swift */,
+				21F89470202F8A4E005820FD /* BookmarksViewController.swift */,
+				21F8946C202E64FA005820FD /* CoreDataStack.swift */,
+				21F8946E202F8448005820FD /* Quote extensions.swift */,
+				21F89472202F8BB4005820FD /* QuoteCell.swift */,
 				21BC74E22023D27800685348 /* PresidentCell.swift */,
 				21C372DD2023CF580017DBFB /* Main.storyboard */,
+				21F89469202E647B005820FD /* storedQuote.xcdatamodeld */,
 				21E792B12011C3D7009B58EB /* Networking.swift */,
 				21B99BFA200FF0CE00FD05A8 /* Assets.xcassets */,
 				21B99BFC200FF0CE00FD05A8 /* LaunchScreen.storyboard */,
@@ -145,11 +160,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F89473202F8BB4005820FD /* QuoteCell.swift in Sources */,
+				21F89471202F8A4E005820FD /* BookmarksViewController.swift in Sources */,
+				21F8946D202E64FA005820FD /* CoreDataStack.swift in Sources */,
 				21E792B22011C3D7009B58EB /* Networking.swift in Sources */,
 				21BC74E32023D27800685348 /* PresidentCell.swift in Sources */,
+				21F8946F202F8448005820FD /* Quote extensions.swift in Sources */,
 				21330C8220140FF300CD985C /* QuoteViewController.swift in Sources */,
 				21B99BF6200FF0CE00FD05A8 /* ViewController.swift in Sources */,
 				21B99BF4200FF0CE00FD05A8 /* AppDelegate.swift in Sources */,
+				21F8946B202E647B005820FD /* storedQuote.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +354,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		21F89469202E647B005820FD /* storedQuote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				21F8946A202E647B005820FD /* storedQuote.xcdatamodel */,
+			);
+			currentVersion = 21F8946A202E647B005820FD /* storedQuote.xcdatamodel */;
+			path = storedQuote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 21B99BE8200FF0CE00FD05A8 /* Project object */;
 }

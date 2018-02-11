@@ -17,8 +17,6 @@ enum President: Int {
     case Washington = 0
     case Lincoln = 1
     case FDR = 2
-    
-    
 }
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -53,7 +51,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.collectionView.dataSource = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "DRUNK PRESIDENTS"
     }
     
@@ -70,7 +68,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // Think about moving this to an extension
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.president_count + 3
+        return self.president_count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -106,7 +104,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     // MARK: Utility
     
-    func getPrez (prez: Int) {
+    func getPres (pres: Int) {
         
     }
 
