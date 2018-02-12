@@ -53,6 +53,7 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         if editingStyle == .delete {
             let deleteQuote = self.quotes[indexPath.row]
             stack.viewContext.delete(deleteQuote)
+            stack.saveTo(context: stack.viewContext)
             self.quotes.remove(at: indexPath.row)
             tableView.reloadData()
         }
